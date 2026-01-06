@@ -3,3 +3,5 @@
 
 # Backend environment variables
 backend/.env
+
+backend/__pycache__/
