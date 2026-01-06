@@ -1,0 +1,210 @@
+:root {
+  color-scheme: dark;
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+body {
+  margin: 0;
+  background: #0d1117;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #1f2630;
+  background: #0f1722;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.tagline {
+  margin: 4px 0 0;
+  color: #9fb3c8;
+  font-size: 13px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.controls input {
+  width: 320px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #2d3748;
+  background: #111827;
+  color: #e6edf3;
+}
+
+.controls button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.controls button.preset {
+  background: #475569;
+}
+
+.controls button#pauseBtn {
+  background: #ef4444;
+}
+
+.controls button#stepBtn {
+  background: #f59e0b;
+}
+
+.controls button#resumeBtn {
+  background: #22c55e;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  padding: 16px 24px 24px;
+}
+
+.world {
+  position: relative;
+  background: #0b1220;
+  border-radius: 12px;
+  padding: 12px;
+  border: 1px solid #1f2937;
+}
+
+#worldCanvas {
+  border-radius: 8px;
+  background: #0b1220;
+  image-rendering: pixelated;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 12px;
+  color: #9fb3c8;
+}
+
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 60%;
+}
+
+.progress-bar {
+  background: #1f2937;
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.synergy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.trace {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.panel {
+  background: #0b1220;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #1f2937;
+  background: #111827;
+  color: #cbd5f5;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+.log-card {
+  background: #111827;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #1f2937;
+}
+
+.log-card h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #93c5fd;
+}
+
+.log-card p {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #e2e8f0;
+}
+
+.log-card ul {
+  margin: 4px 0 0 16px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.footer {
+  padding: 12px 24px 24px;
+  color: #64748b;
+  font-size: 12px;
+}
