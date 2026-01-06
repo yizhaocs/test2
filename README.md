@@ -31,15 +31,17 @@ frontend/
 > 需要 Python 3.10+
 
 ```bash
-cd backend
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-cp ../.env.example .env
+pip install -r backend/requirements.txt
+cp .env.example .env
 uvicorn backend.app:app --reload --host 0.0.0.0 --port 8000
 ```
 
 访问 `http://localhost:8000`。
+
+> 如果你一定要在 `backend/` 目录内启动，请使用：
+> `PYTHONPATH=.. uvicorn backend.app:app --reload --host 0.0.0.0 --port 8000`
 
 也可以直接用 `package.json` 脚本：
 ```bash
