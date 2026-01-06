@@ -1,0 +1,9 @@
+{
+  "name": "pixel-duo-agents-demo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "uvicorn backend.app:app --host 0.0.0.0 --port 8000",
+    "dev": "uvicorn backend.app:app --reload --host 0.0.0.0 --port 8000"
+  }
+}
