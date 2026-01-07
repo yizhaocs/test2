@@ -6,7 +6,8 @@ import uuid
 from dataclasses import dataclass
 from typing import Any, Dict
 
-from openai.agents import Agent, Runner
+from agents import Agent
+from agents.run import Runner
 
 
 @dataclass
