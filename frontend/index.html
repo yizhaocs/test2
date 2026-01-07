@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>双人像素协作 Agent Demo</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="title">
+        <h1>像素协作小剧场</h1>
+        <p class="tagline">输入一句指令，看两位 AI 伙伴在像素世界里边走边聊、分工协作。</p>
+      </div>
+      <div class="controls">
+        <input id="commandInput" placeholder="输入指令，例如：去商店买 2 个苹果，然后送到家门口" />
+        <button id="sendCommand">开始</button>
+        <button class="preset" data-mission="task_a">新手任务</button>
+        <button class="preset" data-mission="task_b">协作机关</button>
+        <button class="preset" data-mission="task_c">轻喜剧</button>
+        <button id="pauseBtn">暂停</button>
+        <button id="stepBtn">单步</button>
+        <button id="resumeBtn">继续</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="world">
+        <canvas id="worldCanvas" width="640" height="448"></canvas>
+        <div class="hud">
+          <div class="progress">
+            <span>任务进度</span>
+            <div class="progress-bar"><div id="progressFill"></div></div>
+          </div>
+          <div class="synergy">
+            <span>默契值</span>
+            <strong id="synergyValue">0</strong>
+          </div>
+          <div class="trace">
+            Trace ID: <span id="traceId">--</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="tabs">
+          <button data-tab="overview" class="active">总览</button>
+          <button data-tab="lan">阿岚</button>
+          <button data-tab="xia">小夏</button>
+          <button data-tab="world">世界事件</button>
+        </div>
+        <div class="tab-content" id="overview"></div>
+        <div class="tab-content hidden" id="lan"></div>
+        <div class="tab-content hidden" id="xia"></div>
+        <div class="tab-content hidden" id="world"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="help">输入 /help 查看说明</div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
